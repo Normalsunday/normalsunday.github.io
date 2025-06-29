@@ -78,8 +78,18 @@
                         <div class="row">
                             <div class="col-xxl-12">
                                 <div class="hero-caption text-center mb-100">
-                                    <span>在准备出发的路上读了好些书</span>
-                                    <h1 data-animation="pulse" data-delay=".4s">LONG TIME TO STAY</h1>
+                                    <h1 id="days" data-animation="pulse" data-delay=".4s">700 days</h1>
+                                    <script>
+                                        function calculateDays() {
+                                            const targetDate = new Date('2027-06-01');
+                                            const today = new Date();
+                                            const oneDay = 24 * 60 * 60 * 1000; // 一天的毫秒数
+                                            const diffDays = Math.ceil((targetDate - today) / oneDay);
+                                            document.getElementById('days').textContent = `${diffDays} days`;
+                                        }
+
+                                        calculateDays();
+                                    </script>
                                 </div>
                             </div>
                         </div>
